@@ -1,1 +1,185 @@
 /index.html
+<!-- Landing Page: Bisnis Makan (Gen Z)
+     Single-file HTML -> langsung tempel di SPCK Editor sebagai index.html
+     Ganti foto1.jpg dan foto2.jpg dengan foto yang Anda upload (nama file sensitif)
+-->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Warung MAMA GIRAH — Makan Enak, Cepat, Kekinian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#FF6B6B;--muted:#9aa4b2;--glass:rgba(255,255,255,0.05)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#0b1220 0%, #081019 100%);color:#e6eef8;line-height:1.45}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* NAV */
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#ff9a9e 0%, #fad0c4 100%);display:grid;place-items:center;font-weight:800;color:#111}
+    .nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .cta{background:var(--accent);color:#111;padding:8px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;margin-top:18px}
+    .eyebrow{color:var(--accent);font-weight:800;letter-spacing:0.6px}
+    h1{font-size:34px;margin:10px 0 8px}
+    p.lead{color:var(--muted);margin-bottom:18px}
+    .actions{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid transparent}
+    .btn-primary{background:linear-gradient(90deg,#ff8a65,#ff6b6b);color:#111}
+    .btn-ghost{background:transparent;border-color:rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Card menu */
+    .card-row{display:flex;gap:14px;margin-top:18px}
+    .card{background:var(--card);padding:12px;border-radius:14px;flex:1;min-width:0}
+    .card h3{margin:6px 0 4px}
+    .price{color:var(--accent);font-weight:800}
+
+    /* IMAGE STYLE */
+    .hero-image{width:100%;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hero-image img{display:block;width:100%;height:100%;object-fit:cover}
+
+    /* SECTION: FEATURES + GALLERY */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:36px 0}
+    .feature{background:var(--glass);padding:16px;border-radius:12px}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .gallery img{width:100%;height:320px;object-fit:cover;border-radius:12px}
+
+    /* FOOTER */
+    footer{margin-top:36px;padding:20px 0;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .hero-image{height:320px}
+      .features{grid-template-columns:1fr 1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      h1{font-size:26px}
+      .nav a{display:none}
+      .card-row{flex-direction:column}
+      .features{grid-template-columns:1fr}
+    }
+
+    /* small utility */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">WX</div>
+        <div>
+          <div style="font-weight:800">Warung NASI MAMA GIRAH </div>
+          <div class="muted" style="font-size:12px">Makanan cepat & kekinian</div>
+        </div>
+      </div>
+      <div>
+        <a href="#menu">Menu</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#order">Order</a>
+        <a class="cta" href="#order">Pesan Sekarang</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Makan Enak, Bukan Cuma Janji</div>
+        <h1>Nasi + Protein Goreng + Sambal khas — Cepat & Instagramable</h1>
+        <p class="lead">Menu yang dibuat buat Gen Z: rasa kuat, tampilan kuat, dan harga yang nggak nyiksa kantong pelajar. Punya foto? Ganti saja file image di bawah untuk langsung live.</p>
+
+        <div class="card-row">
+          <div class="card">
+            <div class="pill">Hot Pick</div>
+            <h3>Nasi Goreng Spesial</h3>
+            <div class="muted">Nasi goreng bumbu rahasia + telur mata sapi</div>
+            <div class="price">Rp 28.000</div>
+          </div>
+          <div class="card">
+            <div class="pill">Viral</div>
+            <h3>Ayam Geprek Sambal Matah</h3>
+            <div class="muted">Crunchy dan pedas level Gen Z</div>
+            <div class="price">Rp 30.000</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px" class="actions">
+          <a class="btn btn-primary" href="#order">Pesan via WhatsApp</a>
+          <a class="btn btn-ghost" href="#menu">Lihat Menu</a>
+        </div>
+      </div>
+
+      <!-- IMAGE: ganti photo1.jpg dengan foto nasi goreng yang Anda upload -->
+      <div class="hero-image" aria-hidden="true">
+        <img src="487f2d664ab0a17471c0229f39cee0b9.jpg" alt="Nasi Goreng - hero image"/>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" aria-label="keunggulan">
+      <div class="feature">
+        <h4>Rasa Konsisten</h4>
+        <p class="muted">Standard resep, training karyawan, kualitas bahan.</p>
+      </div>
+      <div class="feature">
+        <h4>Estetika Sosmed</h4>
+        <p class="muted">Packaging dan plating yang photogenic — konten gampang viral.</p>
+      </div>
+      <div class="feature">
+        <h4>Delivery Cepat</h4>
+        <p class="muted">Partner kurir lokal & packing anti tumpah.</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="galeri" style="margin-top:6px">
+      <h2>Galeri</h2>
+      <p class="muted">Ganti foto2.jpg dengan foto ayam geprek (file tersedia di upload Anda)</p>
+      <div class="gallery" id="gallery">
+        <img src="667f61a559acb0be4bda155c0ca38ccf.jpg" alt="Ayam Geprek - gallery" />
+        <div style="display:grid;gap:14px">
+          <img src="photo1.jpg" alt="Nasi Goreng lagi" style="height:150px;object-fit:cover"/>
+          <img src="photo2.jpg" alt="Plating" style="height:150px;object-fit:cover"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER -->
+    <section id="order" style="margin-top:26px">
+      <h2>Order Sekarang</h2>
+      <p class="muted">Pesan lewat WhatsApp atau datang langsung. Tersedia opsi pick-up dan delivery.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20Warung%20X,%20saya%20mau%20pesan" target="_blank">Chat WhatsApp</a>
+        <a class="btn btn-ghost" href="#" onclick="copyNumber()">Salin Nomor</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <strong>Warung MAMA GIRAH</strong> — dibuat untuk Gen Z yang lapar & no drama.</div>
+    </footer>
+  </div>
+
+  <script>
+    // SIMPLE: replaceable script untuk SPCK editor
+    function copyNumber(){
+      const num = '+6285959282018 ';
+      navigator.clipboard?.writeText(num).then(()=>{
+        alert('Nomor disalin: '+num);
+      },()=>{alert('Silakan salin manual: '+num)});
+    }
+
+    // small lazy-loading fallback
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('img').forEach(img=>{if(!img.complete)img.loading='lazy'});
+    });
+  </script>
+</body>
+</html>
